@@ -1,7 +1,8 @@
 const currentDate = new Date();
-const currentDay = currentDate.getDate();
-const currentMonth = currentDate.getMonth() + 1;
-const currentYear = currentDate.getFullYear();
+let currentNumberDay = currentDate.getDay();
+let currentDay = currentDate.getDate();
+let currentMonth = currentDate.getMonth() - 1;
+let currentYear = currentDate.getFullYear();
 
 let days = [];
 let months = [];
@@ -10,20 +11,48 @@ let years = [];
 function generateCalendar() {
     const table = document.getElementById('table');
     const day = document.getElementsByTagName('td');
-    let numbers = 1;
+    const header = document.getElementById('header');
+    const arrowForward = document.getElementById('arrow-forward');
+    const arrowBack = document.getElementById('arrow-back');
+    let namesMonths = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    let daysOfWeek = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+    let nameDay = daysOfWeek[currentNumberDay];
+
+    // function makeDays() {
+    //     for (let i = 0; i < day.length; i++) {
+    //         day[i].innerText = currentDay++;
+    //         // if (currentDay > 31) {
+    //         //     currentDay = 1;
+    //         // }
+    //     }
+    //     // for (let i = 0; i < day.length; i++) {
+    //     //     days.push(parseInt(day[i].innerText)); 
+    //     // }
+    // }
+    // makeDays();
 
     function makeDays() {
-        for (let i = 0; i < day.length; i++) {
-            day[i].innerText = numbers++;
-            if (numbers > 31) {
-                numbers = 1;
+        let dayCounter = 1;
+        
+        // for (let i = 1 ; i < day.length ; i++){
+        //     if (i < day.length){
+        //         day[i].innerText = dayCounter++
+        //     }
+        // }
+        
+        for (let i = currentDay; i < day.length; i++){
+            day[i].innerText = currentDay++
+            if (currentDay > 31) {
+                currentDay = 1;
             }
         }
-        for (let i = 0; i < day.length; i++) {
-            days.push(parseInt(day[i].innerText)); 
-        }
+
+        
     }
-    makeDays();
+    makeDays()
+
+    console.log(currentNumberDay);
+    console.log(currentDay)
 
     function makeMonths() {
         // Vamos separar os dias por mês
@@ -48,6 +77,34 @@ function generateCalendar() {
         return years;
     };
     console.log(years)
+
+    header.innerText = namesMonths[currentMonth + 1] + ' - ' + currentYear;
+
+    arrowForward.addEventListener('click', function(ev){
+        ev.preventDefault();
+        
+        currentMonth++;
+
+        if (currentMonth >= namesMonths.length) {
+            currentMonth = 0;
+            currentYear++;
+        };
+
+        header.innerText = namesMonths[currentMonth] + ' - ' + currentYear;
+    });
+
+    arrowBack.addEventListener('click', function(ev){
+        ev.preventDefault();
+
+        currentMonth--;
+
+        if (currentMonth < 0) {
+        currentMonth = 11
+        currentYear--;
+        }
+
+        header.innerText = namesMonths[currentMonth] + ' - ' + currentYear;
+    });
 
     makeMonths();
     makeYear();
