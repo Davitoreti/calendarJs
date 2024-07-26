@@ -1,6 +1,3 @@
-
-
-
 const currentDate = new Date();
 let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();

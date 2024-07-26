@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendário</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
 </head>
+
 <body class="bg-gradient-to-l from-blue-300 to-blue-100 text-blue-900">
-    <h1 class="text-center text-2xl font-bold mt-10">Bem vindo(a) ao calendário!</h1>
-    
-      <div class="flex">
-        <div class="flex items-center mx-auto group">
-          <img id="arrow-back" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/back.png" alt="back" class="transition-transform duration-300 ease-in-out transform group-hover:-translate-x-2"/>
-        </div>
-        <table id="table" class="border-collapse border mx-auto my-10 align-items-center">
-            <thead>
-                <tr>
-                    <th id="header" colspan="7" class="border border-slate-400 p-3 font-semibold"></th>
-                </tr>
-                <thead>
-                    <tr>
-                        <th class="border border-slate-400 font-medium p-3">Domingo</th>
-                        <th class="border border-slate-400 font-medium p-3">Segunda</th>
-                        <th class="border border-slate-400 font-medium p-3">Terça</th>
-                        <th class="border border-slate-400 font-medium p-3">Quarta</th>
-                        <th class="border border-slate-400 font-medium p-3">Quinta</th>
-                        <th class="border border-slate-400 font-medium p-3">Sexta</th>
-                        <th class="border border-slate-400 font-medium p-3">Sábado</th>
-                    </tr>
-                </thead>
-            </thead>
-            <tbody >
-            <tbody class="text-center h-96">
-              <tr>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-              </tr>
-              <tr>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-              </tr>
-              <tr>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-              </tr>
-              <tr>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-              </tr>
-              <tr>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-                <td class="border border-slate-400 w-40"></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="flex items-center mx-auto group">
-            <img id="arrow-forward" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/forward.png" alt="forward" class="transition-transform duration-300 ease-in-out transform group-hover:translate-x-2"/>
-          </div>
-      </div>
+  <h1 class="text-center text-2xl font-bold mt-10">Bem vindo(a) ao calendário!</h1>
+
+  <div class="flex">
+    <div class="flex items-center mx-auto group">
+      <img id="arrow-back" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/back.png" alt="back"
+        class="transition-transform duration-300 ease-in-out transform group-hover:-translate-x-2" />
+    </div>
+    <table id="table" class="border-collapse border mx-auto my-10 align-items-center">
+      <thead>
+        <tr>
+          <th id="header" colspan="7" class="border border-slate-400 p-3 font-semibold"></th>
+        </tr>
+        <thead>
+          <tr>
+            <th class="border border-slate-400 font-medium p-3">Domingo</th>
+            <th class="border border-slate-400 font-medium p-3">Segunda</th>
+            <th class="border border-slate-400 font-medium p-3">Terça</th>
+            <th class="border border-slate-400 font-medium p-3">Quarta</th>
+            <th class="border border-slate-400 font-medium p-3">Quinta</th>
+            <th class="border border-slate-400 font-medium p-3">Sexta</th>
+            <th class="border border-slate-400 font-medium p-3">Sábado</th>
+          </tr>
+        </thead>
+      </thead>
+      <tbody>
+      <tbody class="text-center h-96">
+        <tr>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+        </tr>
+        <tr>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+        </tr>
+        <tr>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+        </tr>
+        <tr>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+        </tr>
+        <tr>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+          <td class="border border-slate-400 w-40"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="flex items-center mx-auto group">
+      <img id="arrow-forward" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/forward.png"
+        alt="forward" class="transition-transform duration-300 ease-in-out transform group-hover:translate-x-2" />
+    </div>
+  </div>
 </body>
+
 </html>
