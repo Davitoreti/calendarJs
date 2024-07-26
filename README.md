@@ -7,7 +7,7 @@
 
 ## :desktop_computer: Deployed
 
-https://github.com/Davitoreti/OnebitX
+https://github.com/Davitoreti/calendarJs
 
 https://calendar-js-lake.vercel.app/
 
